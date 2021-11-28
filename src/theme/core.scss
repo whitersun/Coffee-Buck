@@ -1,0 +1,150 @@
+:root {
+  --ion-font-family: 'Poppins', sans-serif;
+
+  .ios {
+    --ion-safe-area-top: 40px;
+    --ion-safe-area-bottom: 10px;
+  }
+
+  --ion-color-lime: #cdf5d0;
+  --ion-color-lime-rgb: 186, 233, 196;
+  --ion-color-lime-contrast: #000000;
+  --ion-color-lime-contrast-rgb: 0, 0, 0;
+  --ion-color-lime-shade: #a4cdac;
+  --ion-color-lime-tint: #cdf5d0;
+
+  --ion-color-white: #ffffff;
+  --ion-color-white-rgb: 255, 255, 255;
+  --ion-color-white-contrast: #161616;
+  --ion-color-white-contrast-rgb: 0, 0, 0;
+  --ion-color-white-shade: #e0e0e0;
+  --ion-color-white-tint: #ffffff;
+
+  --ion-color-orange: #fe8801;
+  --ion-color-orange-rgb: 254,136,1;
+  --ion-color-orange-contrast: #ffffff;
+  --ion-color-orange-contrast-rgb: 255,255,255;
+  --ion-color-orange-shade: #e07801;
+  --ion-color-orange-tint: #fe941a;
+}
+
+.ion-color-lime {
+  --ion-color-base: var(--ion-color-lime);
+  --ion-color-base-rgb: var(--ion-color-lime-rgb);
+  --ion-color-contrast: var(--ion-color-lime-contrast);
+  --ion-color-contrast-rgb: var(--ion-color-lime-contrast-rgb);
+  --ion-color-shade: var(--ion-color-lime-shade);
+  --ion-color-tint: var(--ion-color-lime-tint);
+}
+
+.ion-color-white {
+  --ion-color-base: var(--ion-color-white);
+  --ion-color-base-rgb: var(--ion-color-white-rgb);
+  --ion-color-contrast: var(--ion-color-white-contrast);
+  --ion-color-contrast-rgb: var(--ion-color-white-contrast-rgb);
+  --ion-color-shade: var(--ion-color-white-shade);
+  --ion-color-tint: var(--ion-color-white-tint);
+}
+
+.ion-color-orange {
+  --ion-color-base: var(--ion-color-orange);
+  --ion-color-base-rgb: var(--ion-color-orange-rgb);
+  --ion-color-contrast: var(--ion-color-orange-contrast);
+  --ion-color-contrast-rgb: var(--ion-color-orange-contrast-rgb);
+  --ion-color-shade: var(--ion-color-orange-shade);
+  --ion-color-tint: var(--ion-color-orange-tint);
+}
+
+@media (prefers-color-scheme: dark) {
+  /*
+   * Dark Colors
+   * -------------------------------------------
+   */
+
+  body {
+    --ion-color-white: #ffffff;
+    --ion-color-white-rgb: 255, 255, 255;
+    --ion-color-white-contrast: #161616;
+    --ion-color-white-contrast-rgb: 0, 0, 0;
+    --ion-color-white-shade: #e0e0e0;
+    --ion-color-white-tint: #ffffff;
+  }
+
+  /*
+   * iOS Dark Theme
+   * -------------------------------------------
+   */
+
+  .ios body {
+  }
+
+  .ios ion-modal {
+  }
+
+
+  /*
+   * Material Design Dark Theme
+   * -------------------------------------------
+   */
+
+  .md body {
+  }
+}
+
+/****************************************/
+.ms-auto {
+  margin-left: auto !important;
+}
+
+.me-auto {
+  margin-right: auto !important;
+}
+
+.w-max-content {
+  width: max-content !important;
+}
+
+.w-100 {
+  width: 100% !important;
+}
+
+.w-75 {
+  width: 75% !important;
+}
+
+.w-50 {
+  width: 50% !important;
+}
+
+.text-center { text-align: center !important; }
+
+.skeleton-loader {
+  width: 130px;
+  height: 195px;
+  aspect-ratio: 2/3;
+  border-radius: 10px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.custom-rounded:is(ion-img)::part(image) {
+  border-radius: 10px;
+}
+
+.custom-shadow:is(ion-img)::part(image) {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.fw-500 {
+  font-weight: 500;
+}
+
+.img-fluid {
+  max-width: 100%;
+  height: auto
+}
+
+.text-white { color: #fff;}
+.lh-15 { line-height: 1.5;}
+.fs-title { font-size: 2rem; }
+
+/****************************************/
