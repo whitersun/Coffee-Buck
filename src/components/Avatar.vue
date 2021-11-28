@@ -4,14 +4,15 @@
   </ion-avatar>
 </template>
 
-<script>
+<script lang="ts">
 import { IonAvatar } from "@ionic/vue";
-export default {
+import { defineComponent } from "@vue/runtime-core";
+export default defineComponent({
   name: "AvatarComponent",
   components: {
     IonAvatar,
   },
-};
+});
 </script>
 
 <script setup>

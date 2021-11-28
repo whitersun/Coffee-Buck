@@ -17,9 +17,10 @@
 
 <script lang="ts">
 import { IonPage, IonHeader, IonToolbar, IonTitle, IonContent } from "@ionic/vue";
+import { defineComponent } from "vue";
 
-export default {
+export default defineComponent({
   name: "VuePageTab2",
   components: { IonHeader, IonToolbar, IonTitle, IonContent, IonPage },
-};
+});
 </script>

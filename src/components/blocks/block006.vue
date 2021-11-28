@@ -53,7 +53,7 @@
   </ion-grid>
 </template>
 
-<script>
+<script lang="ts">
 import {
   IonRow,
   IonCol,
@@ -71,8 +71,9 @@ import {
   IonSkeletonText,
 } from "@ionic/vue";
 import { ref } from "@vue/reactivity";
+import { defineComponent } from "@vue/runtime-core";
 import { add, star } from "ionicons/icons";
-export default {
+export default defineComponent({
   name: "ListBox",
   components: {
     IonGrid,
@@ -94,10 +95,10 @@ export default {
   setup() {
     return { add, star };
   },
-};
+});
 </script>
 
-<script setup>
+<script lang="ts" setup>
 const image001 =
   "https://images.unsplash.com/photo-1507133750040-4a8f57021571?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=387&q=80";
 
@@ -130,12 +131,12 @@ const imgLoadingCss = "position: absolute; opacity: 0; transition: opacity 500ms
 const imgLoadedCss =
   "position: relative; width: 148px; height: 221px; border-radius: 10px; opacity: 1; transition: opacity 500ms ease;";
 
-const imgIsLoading = (event) => {
+const imgIsLoading = (event: any) => {
   event.target.setAttribute("style", imgLoadingCss);
   return imgLoaded.value;
 };
 
-const imgIsLoaded = (event) => {
+const imgIsLoaded = (event: any) => {
   event.target.setAttribute("style", imgLoadedCss);
   imgLoaded.value = true;
 };

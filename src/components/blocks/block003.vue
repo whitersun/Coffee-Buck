@@ -20,7 +20,7 @@ import { IonImg } from "@ionic/vue";
 import { reactive } from "@vue/reactivity";
 
 export default {
-  name: "Block003",
+  name: "VueBlock003",
 
   components: { IonImg },
 };

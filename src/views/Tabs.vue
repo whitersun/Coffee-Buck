@@ -21,7 +21,7 @@
   </ion-tabs>
 </template>
 
-<script>
+<script lang="ts">
 import { IonTabBar, IonTabButton, IonTabs, IonIcon, IonRouterOutlet } from "@ionic/vue";
 import {
   homeOutline,
@@ -29,8 +29,9 @@ import {
   heartOutline,
   notificationsOutline,
 } from "ionicons/icons";
+import { defineComponent } from "vue";
 
-export default {
+export default defineComponent({
   name: "VueMainTabs",
   components: {
     IonTabs,
@@ -47,5 +48,5 @@ export default {
       bagHandleOutline,
     };
   },
-};
+});
 </script>

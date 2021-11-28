@@ -45,7 +45,7 @@
   </ion-list>
 </template>
 
-<script>
+<script lang="ts">
 import {
   IonList,
   IonListHeader,
@@ -58,8 +58,8 @@ import {
 import { Swiper, SwiperSlide } from "swiper/vue";
 // import { reactive } from "@vue/reactivity";
 
-export default {
-  name: "Block004",
+export default defineComponent({
+  name: "VueBlock004",
 
   components: {
     IonList,
@@ -72,7 +72,7 @@ export default {
     IonBadge,
     IonLabel,
   },
-};
+});
 </script>
 
 <script setup>
@@ -82,7 +82,7 @@ import "swiper/css/free-mode";
 import { IonicSwiper } from "@ionic/vue";
 import SwiperCore, { A11y, Autoplay, Lazy } from "swiper";
 import { ref } from "@vue/reactivity";
-import { onMounted } from "@vue/runtime-core";
+import { defineComponent, onMounted } from "@vue/runtime-core";
 
 SwiperCore.use([IonicSwiper, A11y, Autoplay, Lazy]);
 

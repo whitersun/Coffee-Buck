@@ -26,13 +26,14 @@
   </ion-list>
 </template>
 
-<script>
-export default {
-  name: "block001",
-};
+<script lang="ts">
+import { defineComponent } from "@vue/runtime-core";
+export default defineComponent({
+  name: "VueBlock001",
+});
 </script>
 
-<script setup>
+<script lang="ts" setup>
 import { IonList, IonItem, IonLabel, IonText } from "@ionic/vue";
 </script>
 

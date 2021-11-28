@@ -18,19 +18,29 @@
   </ion-item>
 </template>
 
-<script>
+<script lang="ts">
 import { IonItem, IonLabel, IonSelect, IonSelectOption } from "@ionic/vue";
-import { ref } from "@vue/runtime-core";
+import { defineComponent, ref } from "@vue/runtime-core";
 
-export default {
+export default defineComponent({
   name: "SelectedComponent",
   components: { IonItem, IonLabel, IonSelect, IonSelectOption },
   setup() {
-    const optModel1 = ref(3);
-    const optModel2 = ref(null);
-    const moduleOpts = ref([]);
+    const optModel1 = ref<number>(3);
+    const optModel2 = ref<null>(null);
+    const moduleOpts = ref<
+      {
+        id?: number;
+        name?: string;
+      }[]
+    >([]);
 
-    const nation = ref([
+    const nation = ref<
+      {
+        id?: number;
+        name?: string;
+      }[]
+    >([
       { id: 1, name: "American" },
       { id: 2, name: "Vietnamese" },
       { id: 3, name: "Japan" },
@@ -38,7 +48,12 @@ export default {
       { id: 5, name: "Taiwan" },
     ]);
 
-    const food = ref([
+    const food = ref<
+      {
+        id?: number;
+        name?: string;
+      }[]
+    >([
       { id: 1, name: "Hamburger" },
       { id: 2, name: "Pho" },
       { id: 3, name: "Sushi" },
@@ -46,7 +61,7 @@ export default {
       { id: 5, name: "Nothing" },
     ]);
 
-    const optChange = (event) => {
+    const optChange = (event: any) => {
       optModel1.value = event;
       optModel2.value = null;
       moduleOpts.value = food.value;
@@ -62,7 +77,7 @@ export default {
       optChange,
     };
   },
-};
+});
 </script>
 
 <style lang="scss" scoped></style>

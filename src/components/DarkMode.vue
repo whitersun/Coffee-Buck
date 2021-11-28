@@ -9,11 +9,12 @@
   </ion-list>
 </template>
 
-<script>
+<script lang="ts">
 import { IonList, IonItem, IonLabel, IonToggle, IonIcon } from "@ionic/vue";
+import { defineComponent } from "@vue/runtime-core";
 import { moon } from "ionicons/icons";
 
-export default {
+export default defineComponent({
   name: "DarkModeComponent",
   components: {
     IonList,
@@ -22,11 +23,11 @@ export default {
     IonToggle,
     IonIcon,
   },
-};
+});
 </script>
 
-<script setup>
-const darkMode = (event) => {
+<script lang="ts" setup>
+const darkMode = (event: any) => {
   document.body.classList.toggle("dark", event.detail.checked);
 };
 </script>

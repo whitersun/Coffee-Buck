@@ -3,9 +3,11 @@
 </template>
 
 <script lang="ts">
-export default {
+import { defineComponent } from "@vue/runtime-core";
+
+export default defineComponent({
   name: "LoadingComponent",
-};
+});
 </script>
 
 <style lang="scss" scoped>

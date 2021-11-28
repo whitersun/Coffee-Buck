@@ -40,7 +40,7 @@
   </ion-list>
 </template>
 
-<script>
+<script lang="ts">
 import {
   IonImg,
   IonList,
@@ -78,7 +78,7 @@ export default {
 };
 </script>
 
-<script setup>
+<script lang="ts" setup>
 // Import Swiper styles
 import { ref } from "@vue/reactivity";
 import { onMounted } from "@vue/runtime-core";
@@ -105,8 +105,8 @@ const imageArray = [
   { id: 6, name: "Smoothies", path: image6 },
 ];
 
-const swiperRef = ref(null);
-const onSwiper = (swiper) => {
+const swiperRef = ref<any>(null);
+const onSwiper = (swiper: any) => {
   console.log(swiper);
 
   swiperRef.value = swiper;
@@ -117,11 +117,11 @@ let isLoaded = ref(false);
 const imgLoadingCSS = `position: absolute; opacity: 0; transition: opacity 500ms ease;`;
 const imgLoadedCSS = `position: relative; opacity: 1; transition: opacity 500ms ease;`;
 
-const imgIsLoading = (event) => {
+const imgIsLoading = (event: any) => {
   event.target.setAttribute("style", imgLoadingCSS);
   return isLoaded.value;
 };
-const imgIsLoaded = (event) => {
+const imgIsLoaded = (event: any) => {
   event.target.setAttribute("style", imgLoadedCSS);
   isLoaded.value = true;
 };
